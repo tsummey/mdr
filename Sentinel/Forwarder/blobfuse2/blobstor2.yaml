@@ -3,17 +3,19 @@
 ######################################################################
 
 # READ ME FIRST ######################################################
+#
 # For Blobfuse2 to mount the ADLS container in Azure the Storage
 # Account must have NFSv3 and Hierarchical namespace (hns) enabled.
 # If they are not enabled the storage account needs to be recreated.
 # In addition, the blobfuse2 configuration file must have the
 # azstorage type set to 'adls'. If it's not set to adls, you could
-# experience the inability to create a directory in the ADLS
+# experience an error when creating a directory in the ADLS
 # contianer. If you are using a syslog server like RSYSLOG, there may
 # be additional permission settings to configure to create directories
 # properly. Below is an example, in the example, both the
 # $FileCreateMode and $DirCreateMode had to be changed to the values
 # shown below:
+#
 #   Sample rsyslog.conf file configuration
 #      $FileOwner syslog
 #      $FileGroup adm
@@ -28,6 +30,7 @@
 # For example the allow_other at the end of the fstab config below:
 # blobfuse2 /adlslogstor fuse defaults,_netdev,--config-file=/etc/blob
 # fuse2/blobfuse2.yaml,allow_other 0 0
+#
 ######################################################################
 
 allow-other: true
