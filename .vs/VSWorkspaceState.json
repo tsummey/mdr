@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sentinel",
+    "\\Sentinel\\Forwarder",
+    "\\Sentinel\\Forwarder\\blobfuse2"
   ],
-  "SelectedNode": "\\C:\\Users\\tsummey\\Source\\Repos\\mdr",
+  "SelectedNode": "\\Sentinel\\Forwarder\\blobfuse2\\blobstor2.yaml",
   "PreviewInSolutionExplorer": false
 }
